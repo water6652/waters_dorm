@@ -101,6 +101,18 @@
 
     <a class="modal-close" href="#top">Okay</a>
   </div>
+     <script>
+  const keySequence = ['6', '7'];
+  let keysPressed = [];
+  const redirectURL = "https://youtu.be/xMHJGd3wwZk";
+  document.addEventListener('keydown', (e) => {
+    keysPressed.push(e.key);
+    keysPressed = keysPressed.slice(-keySequence.length);
+    if (keysPressed.join('') === keySequence.join('')) {
+      window.location.href = redirectURL;
+    }
+  });
+</script>   
 </div>
 </body>
 </html>
